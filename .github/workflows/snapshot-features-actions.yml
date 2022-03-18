@@ -1,6 +1,6 @@
 name: Generate Snapshot Feature
 
-on:[push]
+on: [push]
 
 jobs:
   Build-Dockerfile:
