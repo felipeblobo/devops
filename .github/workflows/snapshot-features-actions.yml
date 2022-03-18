@@ -1,5 +1,7 @@
 name: Generate Snapshot Feature
 
+on:[push]
+
 jobs:
   Build-Dockerfile:
     runs-on: ubuntu-latest
