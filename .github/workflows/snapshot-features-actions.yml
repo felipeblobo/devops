@@ -1,0 +1,18 @@
+name: Ganerate Snapshot Feature
+on: [push]
+
+jobs:
+  Build-Dockerfile:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout source code
+        uses: actions/checkout@v2
+
+      - name: Install JQ to parse JSON
+        run: sudo apt-get install -y jq
+
+      - name: Extract metadata (tags) for Docker
+        run: echo 'IMAGE_TAG=$(cat example-app/composer.json | jq .version -r)' >> $GITHUB_ENV
+
+      - name: Building Docker Image usin Dockerfile
+        run: docker build -t bootcamp:${{ env.IMAGE_TAG }} .

@@ -1,9 +1,12 @@
 {
     "name": "matera/bootcamp",
-    "version": "1.0.0",
+    "version": "3.0.0",
     "type": "project",
     "description": "Projeto WEB para o curso de DevOps",
-    "keywords": ["framework", "laravel"],
+    "keywords": [
+        "framework",
+        "laravel"
+    ],
     "license": "MIT",
     "require": {
         "php": "^8.0.2",
